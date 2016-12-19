@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+
+<head>
+		<meta charset="utf-8">
+		<title>Documentation</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="assets/js/jquery.min.js"></script>
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+		<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+		<link href="style.min.css" rel="stylesheet">
+		<!--[if lte IE 9]>
+			<script src="assets/js/html5shiv.min.js"></script>
+		<![endif]-->
+		
+		<style>
+.img_left_move {
+    padding-left: 25px;
+}		
+		
+		</style>
+		
+	</head>
+	<body data-spy="scroll" data-target=".bs-docs-sidebar" data-offset-top="0">
+		<div class="container">
+			<div class="bs-docs-sidebar">
+				<ul id="accordion" class="nav nav-list bs-docs-sidenav">
+					<li><a href="#introduction">Introduction</a>
+					</li>
+					<li class="panel"><a data-toggle="collapse" data-parent="#accordion" href="#1">Installation <i class="fa fa-chevron-down"></i></a>
+
+						<ul
+						id="1" class="collapse">
+							<li><a href="#installation">Installation</a>
+							</li>
+							<li><a href="#child">Admin Login</a>
+							</li>
+							<li><a href="#subdirectory">Sub Directory</a>
+							</li>
+							<li><a href="#regenerate">Cronjobs</a>
+							</li>
+							<li><a href="#seolinks">SEO links</a>
+							</li>
+
+				</ul>
+				</li>
+				<li class="panel"><a data-toggle="collapse" data-parent="#accordion" href="#2">Site Configurations <i class="fa fa-chevron-down"></i></a>
+
+					<ul
+					id="2" class="collapse">
+					    <li><a href="#generalsettings">General Settings</a>
+						</li>
+						<li><a href="#menu">Payment Settings</a>
+						</li>
+						<li><a href="#sidebars">User Management</a>
+						</li>
+						<li><a href="#usercharts">Charts</a>
+						</li>
+						<li><a href="#financemenu">Finance</a>
+						</li>
+						<li><a href="#inboxmanagement">Inbox</a>
+						</li>
+						</ul>
+				</li>
+				<li class="panel"><a data-toggle="collapse" data-parent="#accordion" href="#3">Product Management <i class="fa fa-chevron-down"></i></a>
+
+					<ul
+					id="3" class="collapse">
+						<li><a href="#allproducts">All products</a>
+						</li>
+						<li><a href="#manageproductcategories">Manage categories</a>
+						</li>
+						<li><a href="#createnewproductcategory">Create new category</a>
+						</li>
+						<li><a href="#manageyourmedia">Manage your media</a>
+						</li>
+						</ul>
+				</li>
+				<li class="panel"><a data-toggle="collapse" data-parent="#newsmanagement" href="#4">News & Pages Management <i class="fa fa-chevron-down"></i></a>
+
+					<ul
+					id="4" class="collapse">
+						<li><a href="#newsoverview">All articles</a>
+						</li>
+						<li><a href="#createnews">Create news article</a>
+						</li>
+						<li><a href="#managenewscategories">Manage news categories</a>
+						</li>
+						<li><a href="#createnewscategory">Create news category</a>
+						</li>
+						<li><a href="#manageyourpage">Manage your page</a>
+						</li>
+						<li><a href="#createpages">Create pages</a>
+						</li>
+						
+						</ul>
+				</li>
+					
+				<li><a href="#technicalstructurex">Technical Structure</a>
+				</li>
+					
+
+				<li><a href="#copyright">Copyright and Credits</a>
+				</li>
+				</ul>
+			</div>
+			<div class="row">
+				<div class="span9">
+					<section id="introduction">
+						<div class="page-header">
+							 <h1>Welcome to Documentation!</h1>
+
+						</div>
+						 <h3>Thanks for Buying</h3>
+
+						<p>First of all, thank you for buying this script. To make your experience
+							pleasant, we've added as much info as needed in this documentation. If
+							you're stuck with anything, please refer to support forums.</p>
+						<ul>
+							<li>Last Updated: <strong>
+							
+							<script>
+							 var months = new Array(12);
+							months[0] = "January";
+							months[1] = "February";
+							months[2] = "March";
+							months[3] = "April";
+							months[4] = "May";
+							months[5] = "June";
+							months[6] = "July";
+							months[7] = "August";
+							months[8] = "September";
+							months[9] = "October";
+							months[10] = "November";
+							months[11] = "December";
+
+							var current_date = new Date();
+							current_date.setDate(current_date.getDate() + 15);
+							month_value = current_date.getMonth() - 1;
+							day_value = current_date.getDate();
+							year_value = current_date.getFullYear();
+
+							document.write("" + months[month_value] + " " + day_value + ", " + year_value);
+							</script>
+							
+							</strong>
+							</li>
+						</ul>
+					</section>
+					<section id="installation">
+						<div class="page-header">
+							 <h1>Installation</h1>
+
+						</div>
+						<p>To get this script up and running we have to follow a few steps.</p>
+						 <h3>a. Import your database</h3>
+
+						<ol>
+							<li>In this example we use PhpMyAdmin for importing your database. To do this just select the <strong>database.sql</strong> file from the folder <strong>documentation/database</strong> and import the file.</li>
+							<li>In the folder you will find a clean database file that can be used to setup an empty new website.</strong>
+							</li>
+							<li>For a complete video tutorial please check<br>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/jW5lrS6EUPM" frameborder="0" allowfullscreen></iframe></li>
+						
+						</ol>
+						
+						 <h3>b. Change your database settings</h3>
+
+						<div class="img_left_move">
+							<img src="images/change_database_settings.png">
+						</div>
+						<ol>
+							<li>Open the file <strong>config/db.php</strong> and add your own database details in here.</li>
+						</ol>
+						
+						
+						<h3>c. Upload all your files online</h3>
+
+						<ol>
+							<li>Now it is time to upload all your files in the <strong>source</strong> folder.</li>
+						</ol>
+						
+						 <h3>d. Give read permissions to folder</h3>
+
+						<ol>
+							<li>The final step to get started is to give read permissions (777) to the folders <strong>files</strong>, <strong>files_public</strong> and <strong>thumbs</strong>. This is required to let the media manager upload video and image files to your server. More information about how to give read permissions can be found in the video tutorial:<br><br><iframe width="560" height="315" src="https://www.youtube.com/embed/BTZn1khvT0U" frameborder="0" allowfullscreen></iframe></li>
+						</ol>
+						 
+						 
+			 
+						 
+						 
+					</section>
+					<section id="child">
+						<div class="page-header">
+							 <h1>Admin login</h1>
+
+						</div>
+						<p>Now all your files are uploaded and your database is connected, you can login with your administrator account. To give you a quick start we have create an administrator account already.</p>
+						
+						<p>Login with this settings: <br><br><strong>username: admin</strong> <br><strong>password: password</strong><br><br>Please make sure to directly change your administrator password after your first login. You can also change your default administrator email address in the admin portal.</p>
+						
+						<p>You can change your password directly after your first login. Just click the settings button and select change password.</p>
+						
+						<div class="img_left_move">
+							<img src="images/change_admin_password.png">
+						</div><br>
+						
+						<p>You can change your default administrator email address from the admin portal. Just login, click the admin button on top of the website menu (right top corner) and select <strong>settings / general</strong> from the menu.<br><br></p>
+						
+						<div class="img_left_move">
+							<img src="images/change_admin_email.png">
+						</div>
+						
+					</section>
+					
+					<section id="subdirectory">
+						<div class="page-header">
+							 <h1>Sub Directory</h1>
+
+						</div>
+						<p>If you like to install the script to a sub directory on your server please make sure you enter the sub directory path in your admin settings. Otherwise uploads and SEO links wont work correctly.</p>
+						 <h4>How To Do It?</h4>
+
+						<ol>
+							<li>Login to your admin portal and navigate to your <strong>settings / general</strong> menu</strong>
+
+							</li>
+							<li>You now see the field sub directory.</li>
+							<li>Enter the path to your sub directory like /yoursub/directory<br><br>
+							</li>
+							
+						</ol>
+					</section>
+					
+					
+					<section id="regenerate">
+						<div class="page-header">
+							 <h1>Cronjobs</h1>
+
+						</div>
+						<p>To automate some important tasks you have to setup some cronjobs. This way you can update user detail settings, memberships and more without doing anything by hand.</p>
+						 <h4>How To Use It?</h4>
+
+						<ol>
+							<li>Login to your admin portal and navigate to your <strong>settings / cronjobs</strong> menu</strong>
+
+							</li>
+							<li>You now see the complete list with possible cronjobs you have to setup.</li>
+							<li>The process may be vary, depends on your Web Hosting System (we use Cpanel in this example).<br><br>
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/811ygwnLSTA" frameborder="0" allowfullscreen></iframe></li>
+							<br><br><li>Note: make sure your run the <strong>hourly cron</strong> each hour and the <strong>daily cron</strong> every day. The other crons are depending on your own prefered settings. We recommend to run the other crons every <strong>12 hours</strong>.</li>
+							<li><strong>Important:</strong> the secret key can be changed in your admin portal in the <strong>settings / general</strong> menu. This code is there to protect your scripts. Cronjobs can only run if the secret key is correct. This means that if you change your secret code, you have to update the cronjob urls too.</li>
+						</ol>
+					</section>
+					
+					<section id="seolinks">
+						<div class="page-header">
+							 <h1>SEO Links</h1>
+
+						</div>
+						<p>SEO links are important for your search results ranking in search engines. To create SEO links we use htacess files with rewrite scripts loaded. Most of the hosting servers are accepting this technic by default. But in some situations this should be activated first. If you are unsure how to do it please contact your hosting provider or Google on the terms ".htaccess rewrite how to enable". Please be sure to activate this part otherwise if you enable SEO links some links wont work and will return 404 errors.</p>
+						 <h4>How To Use It?</h4>
+
+						<ol>
+							<li>Login to your admin portal and navigate to your <strong>settings / general</strong> menu</strong>
+
+							</li>
+							<li>You now see the complete list with possible settings you have to setup.</li>
+							<li>To enable the SEO links just select YES and save the page.</li>
+						</ol>
+						</section>
+					
+					
+					<section id="generalsettings">
+						<div class="page-header">
+							 <h1>General Settings</h1>
+
+						</div>
+						<p>The general settings can be located from your admin panel under the <strong>settings / general</strong> menu.</p>
+
+						
+						<p>The general settings are the default settings that will be used for your website. Thinks you can manage are</p>
+						<ol>
+							<li><strong>Website title:</strong> the name of your website.</li>
+							<li><strong>Website description:</strong> the description how your website is indexed for search engines.</li>
+							<li><strong>Admin email address:</strong> the default admin email account.</li>
+							<li><strong>Unique secure key:</strong> this key is used to secure media files from the FTP upload parts and to protect cronjobs.</li>
+							<li><strong>Subdomain:</strong> the location of your source files if you are using a subdomain.</li>
+							<li><strong>ShareThis account:</strong> if you like to activate the ShareThis.com share buttons you have to enter your account here.</li>
+							<li><strong>Disqus account:</strong> your Disqus.com account to protect user comments on pages.</li>
+							<li><strong>SEO links:</strong> to enable or disable SEO proof links.</li>
+							<li><strong>Hide W3layouts copyright:</strong> this let you show or hide the W3layouts copyright on the templates.</li>
+							
+							<li>When you are done, click <strong>Save</strong>
+							</li>
+						</ol>
+						 
+					</section>
+					
+					<section id="menu">
+						<div class="page-header">
+							 <h1>Payment Settings</h1>
+
+						</div>
+						<p>You can manage all your website payment details from your admin portal. To do this navigate to <strong>settings / payments</strong>.</p>
+						 <h3>Setup is done in a few clicks</h3>
+
+						<ol>
+							<li><strong>Price memberships:</strong> this are the cost a user have to pay for his updates.</li>
+							<li><strong>Number of coins:</strong> this are the coins the user will get for each payment.</li>
+							<li><strong>Default currency:</strong> the currency you like to use for your payments.</li>
+							<li><strong>Payout fee:</strong> you can earn money for every donation that is made. The payout fee is the percentage that you will get for every donation. For example; if the fee is 10% and a user donate $100, you will get $10 for every project that reached the funding goals.</li>
+							<li><strong>Payment gateways:</strong> with the checkboxes select the payment gateways you like to use or not. After saving your page new input fields will be there to setup your personal payment systems.</li>
+							
+							<li>When you are done, click <strong>Save</strong>
+							</li>
+						</ol>
+						
+						<p>Just to note: the default payment gateways have sandboxed details by default for testing. You can deactive the sandbox mode by unselect the sandbox checkbox for PayPal. For Stripe you have to enter your own public Stripe account and select the activate button in your Stripe account itself. If you like to use the demo Stripe settings, please use <strong>pk_test_g5rNCSWKUv0plMxfVytIihi1</strong> as sandbox account. You now can use the following details for test payments:
+						</p>
+
+						<li><strong>Card Number:</strong> 4242424242424242</li>
+						<li><strong>Card Expiry Date:</strong> 1234</li>
+						<li><strong>Card Code:</strong> 999</li>
+
+						
+					</section>
+					<section id="sidebars">
+						<div class="page-header">
+							 <h1>User Management</h1>
+
+						</div>
+						<p>You can manage all your users from your admin portal. To do this navigate to <strong>users</strong>.</p>
+						 <h3>How to manage your users?</h3>
+
+						
+						<ol>
+							<li><strong>Edit:</strong> click the edit button to change your user details..</li>
+							<li><strong>Delete:</strong> click the delete button to remove your user. Be carefull to not remove your administrator account.</li>
+							
+						</ol>
+						 
+					</section>
+					
+					<section id="usercharts">
+						<div class="page-header">
+							 <h1>Charts</h1>
+
+						</div>
+						<p>The admin charts can be located from your admin panel under the <strong>charts</strong> menu.</p>
+
+						<p>Charts give you information about everything on your website. Stats are automatically upgraded based on your cronjobs and user behavior.</p>
+						 
+					</section>
+					
+					<section id="financemenu">
+						<div class="page-header">
+							 <h1>Finance Overview</h1>
+
+						</div>
+						<p>The admin finance overview can be located from your admin panel under the <strong>finance</strong> menu.</p>
+
+						
+						<p>The finance overview show a dynamic table with all your payment details and income of your users. The tab <strong>funding overview</strong> gives you an overview of all the users who have completed projects and reached the project goals. Based on the information in the list you see the PayPal address of the users and the amount of money you have to send to this user. After you have send the amount of money you can click the red "confirm payment" button to update the status.</p>
+						 
+					</section>
+					
+					<section id="inboxmanagement">
+						<div class="page-header">
+							 <h1>Inbox</h1>
+
+						</div>
+						<p>The admin inbox can be located from your admin panel under the <strong>inbox</strong> menu.</p>
+
+						
+						<p>The inbox is used to send email messages to specific users or send email newsletters to all your users. You can select to send the email message once or make it recurring. Recurring messages can be usefull if you are planning a marketing campaign or like to resend the same messages over a longer periode.</p>
+						 
+					</section>
+					
+					<section id="allproducts">
+						<div class="page-header">
+							 <h1>Product Overview</h1>
+
+						</div>
+						<p>Products are created by your users in the frontend of your website. Each product can have its own rewards. Are the product is created the product will have the status <strong>not_started</strong>. If the start date is equal to today the daily cronjob automatically update the product status to <strong>started</strong>. At this moment products and rewards cant be changed anymore.</p>
+						
+						<p>Each product will have its own funding goal. Users can fund products. If the product end date is reached the project status will be updated to <strong>complete</strong>. Also the table <strong>product_funding</strong> will be updated automatically.</p>
+						
+						<ul>
+							<li>If the funding goal is reached the <strong>payout_status</strong> is updated to <strong>progress</strong>. The admin can see all completed projects in his financial funding overview to see who should be paid.
+							</li>
+							<li>If the funding goal is not reached the <strong>payout_status</strong> is updated to <strong>cancelled</strong>. All donated money is now refunded to the users who funded the project.
+							</li>
+						</ul>
+						
+						<p>Managing your products is easy as pie. But to give you a quick start, just check these simple explainations for each menu part.</p>
+						 <h3>Check every product that is created</h3>
+
+						<ul>
+							<li>Select <strong>products / all videos</strong> to see all the created products you have in your portal.
+							</li>
+							<li>You can activate products by clicking the <strong>activate</strong> button in the table.
+							</li>
+							<li>To edit a product just click the <strong>edit</strong> button. You can define every product detail in here.</li>
+							<li>To delete a product just click the <strong>delete</strong> button.</li>
+							<li>Note: if you like to edit a product, make sure you have uploaded the product image files. To upload and manage your media files check your  <strong>manage all media</strong> menu item.</li>
+							<li>Note: product rewards can only be created in the frontend. Admins can not change product rewards. You have to be logged in as the user himself.</li>
+						</ul>
+					</section>
+					
+					<section id="manageproductcategories">
+						<div class="page-header">
+							 <h1>Manage product categories</h1>
+
+						</div>
+						<p>In the <strong>products / manage categories </strong> menu you can create and manage all your product categories.
+							Product categories are used as special tags to categorize your products. You only have to activate this category if you like to have it visible for your users.</p>
+					</section>
+					<section id="createnewproductcategory">
+						<div class="page-header">
+							 <h1>Create new category</h1>
+
+						</div>
+						<p>In the <strong>video / create new categories </strong> menu you can create new product categories.
+							Product categories are important to categorize your products. You only have to activate this category if you like to have it visible for your users.</p>
+					</section>
+					
+					<section id="manageyourmedia">
+						<div class="page-header">
+							 <h1>Manage Your Media</h1>
+
+						</div>
+						<p>In the <strong>video / manage your media </strong> menu can manage all your video and image files. This modern FTP browser give you the features to drag and drop your media files and simple upload everything you need. You can view and delete your items and even change the way you like to filter everything.</p>
+						
+						<p>If you like to modify the media manage. For example if you like to allow more file extensions or like to upgrade or downgrade the file size. You have to do this in code. Please open for this the file <strong>/functions/admin/create_filemanager_config.php</strong>.</p>
+						<ul>
+							<li><strong>File size:</strong> search for MaxSizeUpload and change the size. Note; file upload sizes are most of the times defined on your hosting settings too. If you dont know how to change this please contact your hosting provider.
+							</li>
+							<li><strong>Permissions configuration:</strong> search for Permissions configuration and change the settings you like from false to true.
+							</li>
+							<li><strong>Change extensions:</strong> search for Allowed extensions and add or remove the extensions you like.
+							</li>
+						</ul>
+					</section>
+				
+				
+				
+		
+					<section id="newsmanagement">
+						<div class="page-header">
+							 <h1>News Mangement</h1>
+
+						
+						
+			</section>						
+					
+				
+				
+				
+		<section id="newsoverview">
+						<div class="page-header">
+							 <h1>News Overview</h1>
+
+						</div>
+						<p>This page show all the news articles that you have created. You can manage each article by activating, edit and delete.</p>
+						<br>
+						
+						
+			</section>
+			
+			<section id="createnews">
+						<div class="page-header">
+							 <h1>Create News</h1>
+
+						</div>
+						<p>News articles can be created in a few simple clicks. Just enter your title, description and select the category (note: categories should be created first before these can be selected) and click the save button.</p>
+												 
+												
+						
+			</section>
+			
+			<section id="managenewscategories">
+						<div class="page-header">
+							 <h1>Manage news categories</h1>
+
+						</div>
+						<p>News categories can be managed in this overview. You can create new categories, modified existing or delete them.</p>
+			
+
+						
+						
+			</section>
+			
+					<section id="createnewscategory">
+						<div class="page-header">
+							 <h1>Create News Categories</h1>
+
+						</div>
+						<p>Create new news categories to use in your news articles, simple in one single click.</p>
+			
+						
+						
+			</section>
+			
+					<section id="manageyourpage">
+						<div class="page-header">
+							 <h1>Manage your pages</h1>
+
+						</div>
+						<p>This page show all the custom pages you have created for your website. Custom pages can be used to add extra menu parts on your website like contact, terms of use or help page.</p>
+			
+						
+						
+			</section>
+			
+					<section id="createpages">
+						<div class="page-header">
+							 <h1>Create pages</h1>
+
+						</div>
+						<p>Create new pages, simple in one single click. Just enter your title and content and save the page.</p>
+			
+						
+						
+			</section>
+				
+			
+				
+					
+		
+				
+					
+					
+					<section id="technicalstructurex">
+						<div class="page-header">
+							 <h1>Technical Structure</h1>
+
+						</div>
+						<p>If you like to change the code yourself it is important to know how the content structure of our framework is created. Below you can learn everything about the structure with some technical features.</p>
+						 <h3>Structure of the code</h3>
+
+						<div class="small-doc-img">
+							<img src="images/structure_of_the_code.png"
+							alt="">
+						</div><br>
+						
+						
+			</section>
+			
+			<section id="coderequirements">
+						<div class="page-header">
+							 <h1>Code Requirements</h1>
+
+						</div>
+						<p>For a secure and user friendly login registration framework we uses the ultra-modern and future-proof PHP 5.5 BLOWFISH hashing/salting functions (includes the official PHP 5.3 & PHP 5.4 compatibility pack, which makes those functions available in these versions too). This all is build on the php-login-minimal code. In the PHP world every beginner tries to build login systems from scratch, doing all the typical mistakes, usually going from saving plain text passwords to using (horribly wrong) MD5 hashing. This script tries to give beginners a usable code base with a fully implemented user authentication ("login") system, preventing less-experienced developers at least from the worst security issues. This script was originally part of the "php-login project", a collection of 4 different login scripts made in the 2012-2013 PHP era to give especially beginners and security-inexperienced users a set of basic auth functions that fitted the most modern password hashing standards possible. You know, this was the time when even major companies like SONY and LinkedIn used horrible outdated MD5-hashing for their passwords (or even saved everything in plain text) and when the big PHP frameworks didn't have proper user auth solution out-of-the-box.<br><br>
+						To make sure all features in our code are working properly you have to make sure you are using at least PHP 5.3.7+ and MySQL 5 database (please use a modern version of MySQL (5.5, 5.6, 5.7) as very old versions have a exotic bug that makes PDO injections possible. Activated mysqli (last letter is an "i") extension (activated by default on most server setups).<br><br>
+
+						<strong>Security notice: <strong>This script comes with a handy .htaccess in the views folder that denies direct access to the files within the folder (so that people cannot render the views directly). However, these .htaccess files only work if you have set AllowOverride to All in your apache vhost configs. There are lots of tutorials on the web on how to do this.</p>
+												 
+												
+						
+			</section>
+			
+			<section id="copyright">
+				<div class="page-header">
+					 <h1>Copyright and Credits</h1>
+
+				</div>
+				 <h3>Resources Used</h3>
+
+				<ul>
+					<li>	Bootstrap</li>
+					<li>	Font Awesome</li>
+					<li>	jQuery-Autocomplete</li>
+					<li>	FullCalendar</li>
+					<li>	Charts.js</li>
+					<li>	Bootstrap Colorpicker</li>
+					<li>	Cropper</li>
+					<li>	dataTables</li>
+					<li>	Date Range Picker for Bootstrap</li>
+					<li>	Dropzone</li>
+					<li>	Summernote</li>
+					<li>	easyPieChart</li>
+					<li>	ECharts</li>
+					<li>	bootstrap-wysiwyg</li>
+					<li>	Flot - Javascript plotting library for jQuery</li>
+					<li>	gauge.js</li>
+					<li>	iCheck</li>
+					<li>	jquery.inputmask plugin</li>
+					<li>	Ion.RangeSlider</li>
+					<li>	jQuery</li>
+					<li>	jVectorMap</li>
+					<li>	moment.js</li>
+					<li>	Morris.js - pretty time-series line graphs</li>
+					<li>	PNotify - Awesome JavaScript notifications</li>
+					<li>	NProgress</li>
+					<li>	Pace</li>
+					<li>	Parsley</li>
+					<li>	bootstrap-progressbar</li>
+					<li>	select2</li>
+					<li>	Sidebar Transitions - simple off-canvas navigations</li>
+					<li>	Skycons - canvas based wather icons</li>
+					<li>	jQuery Sparklines plugin</li>
+					<li>	switchery - Turns HTML checkbox inputs into beautiful iOS style switches</li>
+					<li>	jQuery Tags Input Plugin</li>
+					<li>	Autosize - resizes text area to fit text</li>
+					<li>	validator - HTML from validator using jQuery</li>
+					<li>	jQuery Smart Wizard</li>
+					<li>	Google Charts</li>
+					<li>	jPlayer</li>
+					<li>	W3Layouts</li>
+					<li>	Gentelella from Colorlib (MIT)</li>
+					<li>	Simple HTML Dom</li>
+					<li>	Responsive File Manager (premium)</li>
+				</ul>
+				
+				<p>All used resources are based on GPL, MIT, Creative Common or paid premium licenses. All scripts are changed to get compatible with the new framework. Updates of these files are not part of the package that is used. We cannot guarantee the working feature of those new upgrade. Please make sure to only use our official updates as provided on Codecanyon. </p>
+				
+			</section>
+		</div>
+		</div>
+		</div>
+		
+		<script src="assets/js/docs.min.js"></script>
+	</body>
+
+
+</html>
