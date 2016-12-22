@@ -8,7 +8,7 @@ include 'views/admin/menu.php';
 include 'views/admin/navigation.php';
 ?>
 
-	<!-- page content -->
+	<!-- page content --> <!-- Test Comment -->
 	<div class="right_col" role="main">
 		<div class="">
 			<div class="page-title">
