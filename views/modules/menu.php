@@ -23,10 +23,10 @@
 					i.glyphicon.glyphicon-fire {
 					display: none;
 					}
-
-					a.navbar-brand {
+					/*Removed for interfering with top-nav height 12/22/16*/
+					/*a.navbar-brand {
 					padding-top: 55px;
-					}
+					}*/
 					</style>				
 					
 				<?php

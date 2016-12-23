@@ -1,10 +1,41 @@
-/*@import "variables.less";*/
 body {
-  background-color: #000000;
+  background-color: #333333;
 }
 h1,
 h2,
 h3,
 p {
+  color: #bfa428;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
   color: #FFFFFF;
+  background-color: #bfa428;
+}
+.more a:hover,
+.banner-left:hover div.more a {
+  border: 1px solid #bfa428;
+  background: #bfa428;
+}
+.navbar-brand {
+  color: #bfa428 !important;
+}
+.hvr-sweep-to-bottom:before {
+  background-color: #bdb8ab;
+}
+.nav > li > a {
+  color: #e6e6e6 !important;
+}
+.banner-bottom h3,
+.traveller h3,
+.gallery h3,
+.feature h3,
+.what-we-do h3,
+.team h3,
+.contact h3,
+h3.title,
+.main-services h3,
+.services-overview h3 {
+  color: #bfa428;
 }
