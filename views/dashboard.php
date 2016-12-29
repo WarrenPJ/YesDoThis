@@ -32,7 +32,7 @@ if (isset($login)) {
 				<a href="<?php echo $url; ?>/product_genre.php">Browse the projects</a>
 			</div>
 		</div>
-		<!-- <div class="banner-right"> -->
+		<div class="banner-right">
 			<div class="col-sm-6 banner-right1">
 				<img src="<?php echo $url; ?>/themes/views/images/2.jpg" alt=" " class="img-responsive" />
 				<div class="banner-right-hov">
@@ -48,7 +48,7 @@ if (isset($login)) {
 				
 				</div>
 			</div>
-			<div class="col-sm-6 banner-right2">
+			<div class="col-sm-6 banner-right2"> 
 				<img src="<?php echo $url; ?>/themes/views/images/3.jpg" alt=" " class="img-responsive" />
 				<div class="banner-right1-text">
 					<p>Share the love with your friends online. Because sharing is caring</p>
@@ -60,7 +60,7 @@ if (isset($login)) {
 					</ul>
 				</div>	
 			</div>
-		<!-- </div> -->
+		</div>
 		<div class="clearfix"> </div>
 	</div>
 <!-- //banner -->
