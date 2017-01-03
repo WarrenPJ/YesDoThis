@@ -26,10 +26,12 @@ if (isset($login)) {
 <!-- banner -->
 	<div class="row no-gutter banner">
 		<div class="col-sm-12 banner-left">
-			<h1>Find funding for your dream</h1>
-			<p>The best solution to help everybody realizing their dreams.</p>
-			<div class="more">
-				<a href="<?php echo $url; ?>/product_genre.php">Browse the projects</a>
+			<div class="banner-left-wrap">
+				<h1>Find funding for your dream</h1>
+				<p>The best solution to help everybody realizing their dreams.</p>
+				<div class="more">
+					<a href="<?php echo $url; ?>/product_genre.php">Browse the projects</a>
+				</div>
 			</div>
 		</div>
 		<div class="banner-right">

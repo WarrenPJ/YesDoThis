@@ -123,7 +123,7 @@ body a:hover{
 	-moz-transition:.5s all;
 	-o-transition:.5s all;
 	-ms-transition:.5s all;
-	padding:16em 0 0 16em;
+	padding:16em 0;
 	background-size:100% 100%;
 }
 /*.banner-left:hover{
@@ -166,11 +166,14 @@ body a:hover{
 	text-transform:capitalize;
 }
 .banner-left p{
-	font-size:14px;
+	font-size:18px;
 	color:#fff;
 	line-height:1.8em;
-	width:80%;
+	/*width:80%;*/
 	margin:1em 0 3em;
+}
+.banner-left-wrap {
+	text-align: center;
 }
 .more a{
 	padding:12px 30px;
@@ -1288,10 +1291,10 @@ p.est {
 		min-height: 562px;
 	}
 	.banner-left {
-		padding: 12em 0 0 16em;
+		padding: 12em 0;
 	}
 	.banner-left h1 {
-		font-size: 1.7em;
+		font-size: 2.5em;
 	}
 }
 @media (max-width: 1366px){

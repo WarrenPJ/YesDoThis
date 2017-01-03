@@ -13,15 +13,22 @@ h1, h2, h3, p {
 .more a:hover,.banner-left:hover div.more a{
 	border:1px solid @primary;
 	background:@primary;
+	border-radius: @border;
+}
+.more a {
+	border-radius: @border;
 }
 .navbar-brand {
 	color: @primary !important;
 }
 .hvr-sweep-to-bottom:before {
-	background-color: @secondary;
+	background-color: @primary;
 }
 .nav > li > a {
     color: @text !important;
+}
+.nav > li > a:hover {
+    color: @white !important;
 }
 .banner-bottom h3,.traveller h3,.gallery h3,.feature h3,.what-we-do h3,.team h3,.contact h3,h3.title,.main-services h3,.services-overview h3{
 	color:@primary;

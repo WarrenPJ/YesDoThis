@@ -17,15 +17,22 @@ p {
 .banner-left:hover div.more a {
   border: 1px solid #bfa428;
   background: #bfa428;
+  border-radius: 5px;
+}
+.more a {
+  border-radius: 5px;
 }
 .navbar-brand {
   color: #bfa428 !important;
 }
 .hvr-sweep-to-bottom:before {
-  background-color: #b1b1b1;
+  background-color: #bfa428;
 }
 .nav > li > a {
   color: #e6e6e6 !important;
+}
+.nav > li > a:hover {
+  color: #FFFFFF !important;
 }
 .banner-bottom h3,
 .traveller h3,
@@ -38,4 +45,14 @@ h3.title,
 .main-services h3,
 .services-overview h3 {
   color: #bfa428;
+}
+/*BOOTSTRAP OVERRIDE*/
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.banner-right1.col-sm-6,
+.banner-right2.col-sm-6 {
+  padding-left: 0;
+  padding-right: 0;
 }

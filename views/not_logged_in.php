@@ -19,16 +19,18 @@ if (isset($login)) {
 
 
 <!-- banner -->
-	<div class="banner">
-		<div class="banner-left">
-			<h1>Find funding for your dream</h1>
-			<p>The best solution to help everybody realizing their dreams.</p>
-			<div class="more">
-				<a href="<?php echo $url; ?>/product_genre.php">Browse the projects</a>
+	<div class="row no-gutter banner">
+		<div class="col-sm-12 banner-left">
+			<div class="banner-left-wrap">
+				<h1>Find funding for your dream</h1>
+				<p>The best solution to help everybody realizing their dreams.</p>
+				<div class="more">
+					<a href="<?php echo $url; ?>/product_genre.php">Browse the projects</a>
+				</div>
 			</div>
 		</div>
 		<div class="banner-right">
-			<div class="banner-right1">
+			<div class="col-sm-6 banner-right1">
 				<img src="<?php echo $url; ?>/themes/views/images/2.jpg" alt=" " class="img-responsive" />
 				<div class="banner-right-hov">
 					<h2>Search</h2>
@@ -40,10 +42,10 @@ if (isset($login)) {
 					<input type="text" name="search" placeholder="What are you looking for?" required="">
 					<input type="submit" value="Go">
 				</form>
-
+				
 				</div>
 			</div>
-			<div class="banner-right1">
+			<div class="col-sm-6 banner-right2"> 
 				<img src="<?php echo $url; ?>/themes/views/images/3.jpg" alt=" " class="img-responsive" />
 				<div class="banner-right1-text">
 					<p>Share the love with your friends online. Because sharing is caring</p>
