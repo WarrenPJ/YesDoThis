@@ -16,7 +16,7 @@
 <script src="<?php echo $url; ?>/themes/views/js/less.min.js"></script>
 <script src="<?php echo $url; ?>/themes/views/js/jquery-1.11.1.min.js"></script>
 <!-- livereload -->
-<script src="//localhost:9000/livereload.js"></script>
+<script src="//localhost:35729/livereload.js"></script>
 <!-- //js -->
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 

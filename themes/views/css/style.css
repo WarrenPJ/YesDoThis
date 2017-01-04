@@ -117,7 +117,7 @@ body a:hover{
 	width:100%;
 	background:url(../images/1.jpg) no-repeat 0px 0px;
 	min-height:632px;
-	height:92vh;
+	height:94vh;
 	transition:.5s all;
 	-webkit-transition:.5s all;
 	-moz-transition:.5s all;
@@ -160,16 +160,15 @@ body a:hover{
 	height: 400px;
 }
 .banner-left h1{
-	font-size:2em;
+	font-size:2.6em;
 	color:#fff;
 	margin:0;
 	text-transform:capitalize;
 }
 .banner-left p{
-	font-size:18px;
+	font-size:20px;
 	color:#fff;
-	line-height:1.8em;
-	/*width:80%;*/
+	line-height:1.2em;
 	margin:1em 0 3em;
 }
 .banner-left-wrap {

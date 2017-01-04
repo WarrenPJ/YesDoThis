@@ -1,6 +1,6 @@
 body {
 	background-color: @back !important;
-	color: @primary !important;
+	color: @primary;
 }
 h1, h2, h3, p {
 	color: @primary;
@@ -8,7 +8,7 @@ h1, h2, h3, p {
 
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: @white;
-    background-color:@primary;
+    background-color:@secondary;
 }
 
 .more a:hover,.banner-left:hover div.more a{
@@ -19,17 +19,17 @@ h1, h2, h3, p {
 .more a {
 	border-radius: @border;
 }
-.navbar-brand {
-	color: @primary !important;
-}
+/*.navbar-brand {
+	color: @primary;
+}*/
 .hvr-sweep-to-bottom:before {
 	background-color: @primary;
 }
-.nav > li > a {
-    color: @text !important;
+.nav > li > a:hover, .nav > li > a:active, .nav > li > a:focus {
+    color: @white;
 }
-.nav > li > a:hover {
-    color: @white !important;
+.nav > li > a {
+    color: @secondary;
 }
 .banner-bottom h3,.traveller h3,.gallery h3,.feature h3,.what-we-do h3,.team h3,.contact h3,h3.title,.main-services h3,.services-overview h3{
 	color:@primary;
@@ -46,4 +46,3 @@ h1, h2, h3, p {
   background-color: @secondary;
   color: @white;
 }
-
